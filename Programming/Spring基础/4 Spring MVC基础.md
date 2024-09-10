@@ -415,7 +415,7 @@ URI 路径模式还可以包含嵌入的 `${…}` 占位符，这些占位符在
 
 ### 异常
 
-`@Controller` 和 `@ControllerAdvice` 类可以具有 `@ExceptionHandler` 方法来处理控制器方法中的异常。
+**`@Controller` 和 `@ControllerAdvice` 类可以具有 `@ExceptionHandler` 方法来处理控制器方法中的异常。**
 
 异常可能与正在传播的顶级异常匹配（例如，直接抛出的 `IOException`），或者与包装异常内的嵌套原因匹配（例如，包装在 `IllegalStateException` 中的 `IOException`）。从 5.3 开始，这可以在任意原因级别匹配，而以前只考虑直接原因。
 
@@ -440,7 +440,7 @@ URI 路径模式还可以包含嵌入的 `${…}` 占位符，这些占位符在
 - `@SessionAttribute`：要访问任何会话属性。
 - `@RequestAttribute`：要访问任何请求属性。
 
-`@ExceptionHandler`方法支持以下返回值：
+**`@ExceptionHandler`方法支持以下返回值：**
 
 - `ResponseBody`：返回值通过`HttpMessageConverter`实例进行转换，并写入响应。
 - `HttpEntity<B>`，`ResponseEntity<B>`：返回值指定完整响应（包括 HTTP 标头和正文）通过`HttpMessageConverter`实例进行转换，并写入响应。
